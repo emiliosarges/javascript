@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background: linear-gradient(to bottom, blue, white);
+            min-height: 100%;
+            color: aliceblue;
+            text-align: center;
+            text-decoration: underline;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+        //É possível utilizar também apenas o comando Number(n), dessa forma o sistema identificará se o número necessário será inteiro ou flutuante//
+        var n1 = Number.parseFloat(window.prompt('Digite um número: ')) 
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert('A soma é :' + s)
+
+        /* Para converter número para String utiliza-se os comandos abaixo:
+        String(n)
+        n.toString
+
+        Exemplo:  window.alert('A soma é :' + s.toString)
+                  window.alert('A soma é :' + String(s))      <- concatenação 
+                  
+                  s.length        <- quantos cacracteres a string tem
+                  s.toUpperCase() <- tudo para 'MAIÚSCULAS'
+                  s.toLowerCase() <- tudo para 'minúsculas'
+
+
+        Abaixo um exemplo de template string:
+        > nome = 'Emilio'
+        'Emilio'
+        > idade = 34
+        34
+        > nota = 10
+        10
+        > `O aluno ${nome} com ${idade} anos tirou nota ${nota}` <- template string
+        'O aluno Emilio com 34 anos tirou nota 10'
+        */
+    </script>
+</body>
+</html>
