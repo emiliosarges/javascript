@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt arial;
+            background-color: blueviolet;
+            color: white;
+           
+            width: 500px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--<div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">    <<<<  antes era assim
+       Ao adicionar o EventListener dentro do Script, posso eliminar as funções de dentro do HTML 
+       Vantagem: Código html mais limpo. 
+        --> 
+    <div id="area">
+        <p> &#x1F43B; aperte no Luílio</p>
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')  
+        a.addEventListener('click', clicar)                // <<<< agora ficou assim
+        a.addEventListener('mouseenter', entrar)           // <<<< agora ficou assim
+        a.addEventListener('mouseout', sair)               // <<<< agora ficou assim
+       
+        function clicar() {   
+            a.innerText = 'Te amo!'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+        }
+    </script>
+</body>
+</html>
