@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro / Brasileiro</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 15px;
+            text-align: center;
+        }
+        div#principal {
+            margin: auto;
+            padding: 15px;
+            width: 500px;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.712);
+            color: yellowgreen;
+            line-height: 4;
+        }
+
+        input#pais {
+            width: 80px;
+        }
+
+        input#button {
+            font-weight: bolder;
+            padding: 2px;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro?</h1>
+    <div id="principal">
+    Digite o nome do seu país: <input type="text" name="pais" id="pais">
+    <input id="button" type="button" value="enviar" onclick="verificar()">
+    <div id="resultado"></div>
+    </div>
+    <script>
+        function verificar() {
+            var p = window.document.querySelector('input#pais')
+            var nomepais = p.value.trim()
+            var res = window.document.querySelector('div#resultado')
+
+            if (nomepais.toLowerCase() === "brasil") {
+                res.innerHTML = `<p>Se você vive no ${nomepais}, então você é brasileiro!`;
+            } else {
+                res.innerHTML = `Se você vive no ${nomepais}, então você é estrangeiro!`;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

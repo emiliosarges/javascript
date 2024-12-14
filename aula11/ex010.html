@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#principal {
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.705);
+            color: rgb(218, 218, 28);
+            width: 400px;
+            padding: 20px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            text-align: center;
+            box-shadow: 3px 3px 10px rgb(0, 0, 0);
+        }
+
+        input#txtvel {
+            width: 50px;
+        }
+
+        input#bot {
+            margin: 10px;
+            padding: 5px;
+            text-transform: capitalize;
+            font-weight: bolder;
+    
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        strong {
+            color: rgb(0, 255, 55);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="principal">
+        <div id="user">
+            <h1>Sistema de Multas</h1>
+            Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h <br>
+            <input type="button" id="bot" value="verificar" onclick="calcular()">
+            <div id="res"></div>
+        </div>
+
+        <script>
+            function calcular(){
+                var txtv = window.document.querySelector('input#txtvel')
+                var res = window.document.querySelector('div#res')
+                var vel = Number(txtv.value) //variável vel recebe o valor de var txtv e converte para o tipo número
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} km/h</strong></p>`
+                if (vel > 60) {
+                    res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade</p>`
+                }
+                res.innerHTML =+ `<p>Dirija sempre com cinto de segurança</p>`
+            }
+
+        </script>
+    </div>
+</body>
+</html>
