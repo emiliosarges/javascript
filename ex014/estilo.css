@@ -10,6 +10,7 @@ body {
 header {
     color: white;
     text-align: center;
+    text-shadow: 2PX 2px 3px black;
 }
 
 section {
@@ -31,8 +32,7 @@ section {
 }
 
 div {
-    flex: initial;
-     
+    flex: initial;   
 }
 
 footer {
