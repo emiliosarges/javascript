@@ -32,7 +32,8 @@ section {
 }
 
 div {
-    flex: initial;   
+    flex: initial; 
+    padding: 10px;  
 }
 
 footer {
