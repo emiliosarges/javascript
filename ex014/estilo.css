@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(70,142,236);
+    font: normal 15pt Arial;
+    display: flex;
+    flex-flow: column wrap;  
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    
+    margin: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.466);
+    display: flex;
+}
+
+section {
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex: initial;
+}
+
+div {
+    flex: initial;
+     
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
